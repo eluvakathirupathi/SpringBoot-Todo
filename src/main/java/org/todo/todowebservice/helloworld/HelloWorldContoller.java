@@ -1,7 +1,6 @@
-package org.todo.todowebservice.controllers;
+package org.todo.todowebservice.helloworld;
 
 import org.springframework.web.bind.annotation.*;
-import org.todo.todowebservice.HelloWorldBean;
 
 //make it a controller:
 @RestController
@@ -19,6 +18,7 @@ public class HelloWorldContoller {
 
     @GetMapping(path = "/hello-world-bean")
     public HelloWorldBean helloWorldBean(){
+//        throw new RuntimeException("Application Crashed");
         return new HelloWorldBean("THis is a welcome message");
     }
 

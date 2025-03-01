@@ -1,4 +1,4 @@
-package org.todo.todowebservice;
+package org.todo.todowebservice.helloworld;
 
 public class HelloWorldBean {
 
