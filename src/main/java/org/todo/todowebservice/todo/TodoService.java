@@ -32,4 +32,15 @@ public class TodoService {
         }
         return null;
     }
+    public TodoModel save(TodoModel todo){
+        if(todo.getId()==-1 || todo.getId()==0){
+            todo.setId(++id);
+            todos.add(todo);
+        }
+        else{
+            deleteById(todo.getId());
+            todos.add(todo);
+        }
+        return todo;
+    }
 }

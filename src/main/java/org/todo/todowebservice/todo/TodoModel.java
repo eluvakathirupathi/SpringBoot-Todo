@@ -9,6 +9,8 @@ public class TodoModel {
     private Date target;
     private boolean done;
 
+    public TodoModel (){
+    }
     public TodoModel(int id, String desc, Date target, boolean done) {
         this.id = id;
         this.desc = desc;
