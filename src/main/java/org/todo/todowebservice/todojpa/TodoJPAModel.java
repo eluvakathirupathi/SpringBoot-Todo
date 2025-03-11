@@ -10,9 +10,9 @@ import java.util.Objects;
 public class TodoJPAModel {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
-    private String UserName;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String username;
     private String description;
     private Date target;
     private boolean done;
@@ -20,24 +20,24 @@ public class TodoJPAModel {
     public TodoJPAModel(){
     }
 
-    public TodoJPAModel(long id, String userName, String desc, Date target, boolean done) {
+    public TodoJPAModel(long id, String username, String desc, Date target, boolean done) {
         this.id = id;
-        UserName = userName;
+        this.username = username;
         this.description = desc;
         this.target = target;
         this.done = done;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public String getUserName() { return UserName; }
-    public void setUserName(String UserName) { this.UserName = UserName; }
+    public String getUsername() { return username; }
+    public void setUsername(String UserName) { this.username = UserName; }
 
 
     public String getDescription() {

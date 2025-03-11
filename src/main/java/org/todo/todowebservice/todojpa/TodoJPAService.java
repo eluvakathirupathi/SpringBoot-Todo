@@ -11,4 +11,5 @@ import java.util.List;
 @Repository
 public interface TodoJPAService extends JpaRepository<TodoJPAModel,Long> {
 
+    List<TodoJPAModel> findByUsername(String username);
 }
